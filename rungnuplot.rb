@@ -3,7 +3,7 @@ require 'bson'
 
 def rungnuplot(params)
   cmd = 'gnuplot'
-  inp = "set terminal #{params['term']}\nplot [#{params['limits']}] #{params['function']}\n"
+  inp = "#{params['stdin'].data}"
   out = ''
   err = ''
 
